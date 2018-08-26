@@ -1,0 +1,77 @@
+Events
+  X Function for get/set event
+  
+Event list
+  X EasyEvent
+  X HardEvent
+  X ArachnusDeadEvent
+  X ElevatorEvent
+  X ChargeCoreDeadEvent
+  X ZazabiDeadEvent
+  X SerrisDeadEvent
+  X WaterLevelEvent
+  X BOX1TriggerEvent
+  X BOX1DeadEvent
+  X MegaXDeadEvent
+  X WideCoreDeadEvent
+  X AnimalsEvent
+  X YakuzaDeadEvent
+  X NettoriDeadEvent
+  X NightmareDeadEvent
+  X BOX2TriggerEvent
+  X BOX2DeadEvent
+  X LabExplosionEvent
+  X LabDestroyedEvent
+  X RidleyDeadEvent
+  X SAXDeadEvent
+  X EscapeEvent
+
+Items
+  O Assign item per core-x
+  O Assign item per eye core-x
+  O Assign item per data pad
+  X Abilities count as percent
+
+Bosses
+  O Check item when spawning
+  O Lock doors
+  X Play music
+  O Unlock doors
+  X Resume music
+
+Weapons
+  X Stackable beams
+  X Stackable missiles
+  X Normal missile graphics
+  X Super missile graphics
+  X Increase projectile limits
+  O Obtain missiles and power bombs from tanks
+  O Set starting capacity to 0
+
+Navigation rooms
+  O Only get area map
+  O Enable/disable pad
+  O Change text to "Map Room"
+  O Change minimap tile to "M"
+  O Prevent doors locking
+  O Skip map for ship
+
+Data pads
+  O Enable/disable pad
+  O Assign item with sprite property
+
+Security pads
+  O Enable/disable pad
+  O Assign level with sprite property
+
+Language
+  X Force English
+  X Ending images based on animals
+  
+Misc
+  O Fix text for abilities and security levels
+  X Random SA-X encounters
+  O Skip intro
+  O Skip to credits
+  O Faster elevators
+  O Better eye door RNG
