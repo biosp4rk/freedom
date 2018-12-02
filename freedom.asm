@@ -60,20 +60,20 @@
 .definelabel ZazabiDeadEvent,		0x06
 .definelabel SerrisDeadEvent,		0x07
 .definelabel WaterLevelEvent,		0x08
-.definelabel BOX1TriggerEvent,		0x09
-.definelabel BOX1DeadEvent,			0x0A
+.definelabel Box1TriggerEvent,		0x09
+.definelabel Box1DeadEvent,			0x0A
 .definelabel MegaXDeadEvent,		0x0B
 .definelabel WideCoreDeadEvent,		0x0C
 .definelabel AnimalsEvent,			0x0D
 .definelabel YakuzaDeadEvent,		0x0E
 .definelabel NettoriDeadEvent,		0x0F
 .definelabel NightmareDeadEvent,	0x10
-.definelabel BOX2TriggerEvent,		0x11
-.definelabel BOX2DeadEvent,			0x12
+.definelabel Box2TriggerEvent,		0x11
+.definelabel Box2DeadEvent,			0x12
 .definelabel LabExplosionEvent,		0x13
 .definelabel LabDestroyedEvent,		0x14
 .definelabel RidleyDeadEvent,		0x15
-.definelabel SAXDeadEvent,			0x16
+.definelabel SaxDeadEvent,			0x16
 .definelabel EscapeEvent,			0x17
 
 
@@ -86,7 +86,7 @@
 ;----------
 .org 0x822B9E8  ; unused sound
 
-.include "language\eng_in_jap_new.asm"
+.include "language\language_new.asm"
 .include "bosses_new.asm"
 .include "abilities_new.asm"
 .include "navigation_new.asm"
@@ -96,7 +96,7 @@
 ;---------------
 
 ; force english and allow choosing japanese
-.include "language\eng_in_jap.asm"
+.include "language\language.asm"
 
 ; fix boss spawning, hatch locking, and music
 .include "bosses.asm"

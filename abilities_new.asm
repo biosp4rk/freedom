@@ -27,8 +27,10 @@ CheckHasItem:
 	mov     r15,r0
 @@JumpTable:
 	.word @@ChargeBeam,@@WideBeam,@@PlasmaBeam,@@WaveBeam,@@IceBeam
-	.word @@NormalMissiles,@@SuperMissiles,@@IceMissiles,@@DiffusionMissiles,@@NormalBombs,@@PowerBombs
-	.word @@HiJump,@@SpeedBooster,@@SpaceJump,@@ScrewAttack,@@VariaSuit,@@GravitySuit,@@MorphBall
+	.word @@NormalMissiles,@@SuperMissiles,@@IceMissiles,@@DiffusionMissiles
+	.word @@NormalBombs,@@PowerBombs
+	.word @@HiJump,@@SpeedBooster,@@SpaceJump,@@ScrewAttack
+	.word @@VariaSuit,@@GravitySuit,@@MorphBall
 @@ChargeBeam:
 	ldrb    r1,[r1,0xA]
 	mov     r0,1
@@ -120,8 +122,10 @@ AssignItem:
 	mov     r15,r0
 @@JumpTable:
 	.word @@ChargeBeam,@@WideBeam,@@PlasmaBeam,@@WaveBeam,@@IceBeam
-	.word @@NormalMissiles,@@SuperMissiles,@@IceMissiles,@@DiffusionMissiles,@@NormalBombs,@@PowerBombs
-	.word @@HiJump,@@SpeedBooster,@@SpaceJump,@@ScrewAttack,@@VariaSuit,@@GravitySuit,@@MorphBall
+	.word @@NormalMissiles,@@SuperMissiles,@@IceMissiles,@@DiffusionMissiles
+	.word @@NormalBombs,@@PowerBombs
+	.word @@HiJump,@@SpeedBooster,@@SpaceJump,@@ScrewAttack
+	.word @@VariaSuit,@@GravitySuit,@@MorphBall
 @@ChargeBeam:
 	mov     r0,1
 	add     r1,0xA
@@ -259,5 +263,6 @@ CountAbilities:
 	add     r4,1
 	b       @@SuitLoop
 @@Return:
+	pop     r4,r5
 	bx      r14
 	.pool

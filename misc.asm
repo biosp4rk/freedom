@@ -4,7 +4,7 @@
 	ldrb    r2,[r0]
 	ldr     r7,=MessageTextPointers
 	ldr     r6,=Language
-	b       0x807A126		; jump to code that gets text offset
+	b       0x807A126	; jump to code that gets text offset
 	.pool
 
 ; skip intro
@@ -22,7 +22,7 @@
 
 ; improve eyedoor rng
 .org 0x8043304
-	cmp     r0,8
+	cmp     r0,8		; 9/16 chance
 
 ; faster elevators
 .org 0x8009C9C
@@ -38,6 +38,6 @@
 
 ; TODO: abilities add percent
 .org 0x80A4458
-	nop			; don't subtract 10 from missile count
+	nop				; don't subtract 10 from missile count
 .org 0x80A446A
-	nop			; don't subtract 10 from power bomb count
+	nop				; don't subtract 10 from power bomb count

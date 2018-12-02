@@ -10,20 +10,20 @@ Event list
   X ZazabiDeadEvent
   X SerrisDeadEvent
   X WaterLevelEvent
-  X BOX1TriggerEvent
-  X BOX1DeadEvent
+  X Box1TriggerEvent
+  X Box1DeadEvent
   X MegaXDeadEvent
   X WideCoreDeadEvent
   X AnimalsEvent
   X YakuzaDeadEvent
   X NettoriDeadEvent
   X NightmareDeadEvent
-  X BOX2TriggerEvent
-  X BOX2DeadEvent
+  X Box2TriggerEvent
+  X Box2DeadEvent
   X LabExplosionEvent
   X LabDestroyedEvent
   X RidleyDeadEvent
-  X SAXDeadEvent
+  X SaxDeadEvent
   X EscapeEvent
 
 Items
@@ -51,8 +51,8 @@ Weapons
 Navigation rooms
   O Only get area map
   O Enable/disable pad
-  O Change text to "Map Room"
-  O Change minimap tile to "M"
+  X Change text to "Map Room"
+  X Change minimap tile to "M"
   O Prevent doors locking
   O Skip map for ship
 
@@ -65,8 +65,9 @@ Security pads
   O Assign level with sprite property
 
 Language
-  X Force English
-  X Ending images based on animals
+  O Force English on file select
+  O Language select
+  X Display save file difficulty/location in English
   
 Misc
   O Fix text for abilities and security levels
@@ -75,3 +76,4 @@ Misc
   O Skip to credits
   O Faster elevators
   O Better eye door RNG
+  X Ending images based on animals
