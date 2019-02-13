@@ -22,7 +22,7 @@
 
 ; improve eyedoor rng
 .org 0x8043304
-	cmp     r0,8		; 9/16 chance
+	cmp     r0,8		; 9/16 chance of opening
 
 ; faster elevators
 .org 0x8009C9C
@@ -31,7 +31,13 @@
 	.word 0xFFF8
 
 ; TODO: mid-air bomb jump
-	
+; .org 0x800922E
+	; b       0x8009268
+; .org 0x8009238
+	; b       0x8009268
+; .org 0x800924A
+	; beq     0x8009268
+
 ; play music track for room
 ;.org 0x8090FC8
 ;	mov r1,0		; sets 0x30019F1 to 0

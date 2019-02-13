@@ -28,9 +28,9 @@
 	.halfword 0x0002,0x4000,0x8000,0x0080,0x8000,0x0023,0x0087
 	.halfword 0x0002,0x4000,0x8000,0x0080,0x8000,0x0023,0x0088
 	.halfword 0x0002,0x4000,0x8000,0x0080,0x8000,0x0023,0x0089
-; fix pointer for main deck OAM
+; fix pointer for main deck text OAM
 .org 0x8745D80
-	.word MainDeckOAM
+	.word MainDeckTextOAM
 
 ; fix indentation of metroid symbol
 .org 0x80A29A6
@@ -42,9 +42,6 @@
 
 ; load proper language select text
 .org 0x809FDD4
-	ldr     r0,=Language
-	mov     r1,2
-	strb    r1,[r0]			; reset language to english
 	ldr     r0,=SetLanguageText1
     str     r0,[r2,4]		; [30014BC] = text pointer
     bl      0x80A0A7C
@@ -58,7 +55,7 @@
 .include "lang_select_cursor.asm"
 
 ; set language after choosing
-.org 0x809FE44
+.org 0x809FE40
 	bl      SetChosenLanguage
 	bl      0x80A0C5A
 
@@ -84,6 +81,10 @@
     b       0x80A0034
 .org 0x80A0072
     b       0x80A007A
+	
+; skip overwriting save file's language with english when loading
+.org 0x80A01E2
+	b       0x80A01F2
 
 ; fix file delete text indentation
 .org 0x8745F6F

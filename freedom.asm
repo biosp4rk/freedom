@@ -114,12 +114,9 @@
 .include "navigation.asm"
 
 ; stackable beams/missiles
-;.include "weapons.asm"
+.include "weapons\weapons.asm"
 
 .include "misc.asm"
-
-
-; end game
 
 
 .close

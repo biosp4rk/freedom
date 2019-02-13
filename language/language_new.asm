@@ -14,7 +14,7 @@ EasyNormalText:
 EasyNormalHardText:
     .import "easy_normal_hard_text.bin"
 
-MainDeckOAM:	
+MainDeckTextOAM:
 	.halfword 2
 	.halfword 0x4000,0x8000,0x008A
 	.halfword 0x0000,0x4020,0x008E
@@ -46,6 +46,7 @@ LoadLanguageText:
 	bl      0x80A29E0
 	pop     r0
 	bx      r0
+	.pool
 @@LanguageText:
 	.word SetLanguageText1
 	.word SetLanguageText2
@@ -58,11 +59,17 @@ SetChosenLanguage:
 	ldr     r2,=0x30014B8
     mov     r0,0xC
 	strh    r0,[r2,0xA]		; ???
-	ldrb    r2,[r2,0x16]	; r0 = cursor position
-	lsr     r0,r2,4
+	ldrb    r3,[r2,0x16]	; r0 = cursor position
+	lsr     r0,r3,4
 	mov     r1,0xF
-	and     r1,r2
-	add     r0,r0,r1
-	ldr     r1,=Language
-	strb    r0,[r1]
+	and     r1,r3
+	add     r0,r0,r1		; r0 = language
+	ldrb    r2,[r2,0xD]		; r2 = selected file
+	lsl     r1,r2,2
+	add     r1,r1,r2
+	lsl     r1,r1,2			; r1 = file * 0x14
+	ldr     r2,=SaveFileData
+	add     r1,r2,r1
+	strb    r0,[r1,0x12]	; save file language
     bx      r14
+	.pool

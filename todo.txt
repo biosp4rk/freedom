@@ -1,5 +1,6 @@
 Events
-  X Function for get/set event
+  X Function to check event
+  X Function to set event
   
 Event list
   X EasyEvent
@@ -33,25 +34,23 @@ Items
   X Abilities count as percent
 
 Bosses
-  O Check item when spawning
+  O Check for item before spawning
   O Lock doors
-  X Play music
   O Unlock doors
+  X Play music
   X Resume music
 
 Weapons
-  X Stackable beams
-  X Stackable missiles
-  X Normal missile graphics
-  X Super missile graphics
-  X Increase projectile limits
-  O Obtain missiles and power bombs from tanks
+  O Stackable beams
+  O Stackable missiles
+  O Increase projectile limits
+  X Obtain missiles and power bombs from tanks
   O Set starting capacity to 0
 
 Navigation rooms
   O Only get area map
   O Enable/disable pad
-  X Change text to "Map Room"
+  X Change text to "Map Room" (all languages)
   X Change minimap tile to "M"
   O Prevent doors locking
   O Skip map for ship
@@ -67,7 +66,7 @@ Security pads
 Language
   O Force English on file select
   O Language select
-  X Display save file difficulty/location in English
+  O Display save file difficulty/location in English
   
 Misc
   O Fix text for abilities and security levels
