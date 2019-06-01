@@ -1,30 +1,30 @@
 Events
-  X Function to check event
-  X Function to set event
+  O Function to check event
+  O Function to set event
   
 Event list
   X EasyEvent
   X HardEvent
-  X ArachnusDeadEvent
+  O ArachnusDeadEvent
   X ElevatorEvent
-  X ChargeCoreDeadEvent
-  X ZazabiDeadEvent
-  X SerrisDeadEvent
-  X WaterLevelEvent
+  O ChargeCoreDeadEvent
+  O ZazabiDeadEvent
+  O SerrisDeadEvent
+  O WaterLevelEvent
   X Box1TriggerEvent
   X Box1DeadEvent
-  X MegaXDeadEvent
-  X WideCoreDeadEvent
-  X AnimalsEvent
-  X YakuzaDeadEvent
-  X NettoriDeadEvent
-  X NightmareDeadEvent
+  O MegaXDeadEvent
+  O WideCoreDeadEvent
+  O AnimalsEvent
+  O YakuzaDeadEvent
+  O NettoriDeadEvent
+  O NightmareDeadEvent
   X Box2TriggerEvent
-  X Box2DeadEvent
+  O Box2DeadEvent
   X LabExplosionEvent
   X LabDestroyedEvent
-  X RidleyDeadEvent
-  X SaxDeadEvent
+  O RidleyDeadEvent
+  O SaxDeadEvent
   X EscapeEvent
 
 Items
@@ -44,7 +44,7 @@ Weapons
   O Stackable beams
   O Stackable missiles
   O Increase projectile limits
-  X Obtain missiles and power bombs from tanks
+  O Obtain missiles and power bombs from tanks
   O Set starting capacity to 0
 
 Navigation rooms

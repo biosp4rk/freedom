@@ -8,24 +8,27 @@
 	strb r0,[r4,2]
 
 ; items
-.definelabel ChargeBeam,		0x0
-.definelabel WideBeam,			0x1
-.definelabel PlasmaBeam,		0x2
-.definelabel WaveBeam,			0x3
-.definelabel IceBeam,			0x4
-.definelabel NormalMissiles,	0x5
-.definelabel SuperMissiles,		0x6
-.definelabel IceMissiles,		0x7
-.definelabel DiffusionMissiles,	0x8
-.definelabel NormalBombs,		0x9
-.definelabel PowerBombs,		0xA
-.definelabel HiJump,			0xB
-.definelabel SpeedBooster,		0xC
-.definelabel SpaceJump,			0xD
-.definelabel ScrewAttack,		0xE
-.definelabel VariaSuit,			0xF
-.definelabel GravitySuit,		0x10
-.definelabel MorphBall,			0x11
+.definelabel Energy,		    0x00
+.definelabel MissileTank,		0x01
+.definelabel PowerBombTank,		0x02
+.definelabel ChargeBeam,		0x03
+.definelabel WideBeam,			0x04
+.definelabel PlasmaBeam,		0x05
+.definelabel WaveBeam,			0x06
+.definelabel IceBeam,			0x07
+.definelabel NormalMissiles,	0x08
+.definelabel SuperMissiles,		0x09
+.definelabel IceMissiles,		0x0A
+.definelabel DiffusionMissiles,	0x0B
+.definelabel NormalBombs,		0x0C
+.definelabel PowerBombs,		0x0D
+.definelabel HiJump,			0x0E
+.definelabel SpeedBooster,		0x0F
+.definelabel SpaceJump,			0x10
+.definelabel ScrewAttack,		0x11
+.definelabel VariaSuit,			0x12
+.definelabel GravitySuit,		0x13
+.definelabel MorphBall,			0x14
 
 ; core-x items
 .definelabel ArachnusItem,	MorphBall
@@ -47,9 +50,6 @@
 .definelabel DataPad2,      SuperMissiles
 .definelabel DataPad3,      IceMissiles
 .definelabel DataPad4,      DiffusionMissiles
-.definelabel DataPad5,      0
-.definelabel DataPad6,      0
-.definelabel DataPad7,      0
 
 ; custom events
 .definelabel EasyEvent,				0x01
@@ -57,24 +57,28 @@
 .definelabel ArachnusDeadEvent,		0x03
 .definelabel ElevatorEvent,			0x04
 .definelabel ChargeCoreDeadEvent,	0x05
-.definelabel ZazabiDeadEvent,		0x06
-.definelabel SerrisDeadEvent,		0x07
-.definelabel WaterLevelEvent,		0x08
-.definelabel Box1TriggerEvent,		0x09
-.definelabel Box1DeadEvent,			0x0A
-.definelabel MegaXDeadEvent,		0x0B
-.definelabel WideCoreDeadEvent,		0x0C
-.definelabel AnimalsEvent,			0x0D
-.definelabel YakuzaDeadEvent,		0x0E
-.definelabel NettoriDeadEvent,		0x0F
-.definelabel NightmareDeadEvent,	0x10
-.definelabel Box2TriggerEvent,		0x11
-.definelabel Box2DeadEvent,			0x12
-.definelabel LabExplosionEvent,		0x13
-.definelabel LabDestroyedEvent,		0x14
-.definelabel RidleyDeadEvent,		0x15
-.definelabel SaxDeadEvent,			0x16
-.definelabel EscapeEvent,			0x17
+.definelabel DataPad1Event,         0x06
+.definelabel ZazabiDeadEvent,		0x07
+.definelabel SerrisDeadEvent,		0x08
+.definelabel WaterLevelEvent,		0x09
+.definelabel DataPad2Event,         0x0A
+.definelabel Box1TriggerEvent,		0x0B
+.definelabel Box1DeadEvent,			0x0C
+.definelabel MegaXDeadEvent,		0x0D
+.definelabel WideCoreDeadEvent,		0x0E
+.definelabel DataPad3Event,         0x0F
+.definelabel AnimalsEvent,			0x10
+.definelabel YakuzaDeadEvent,		0x11
+.definelabel NettoriDeadEvent,		0x12
+.definelabel NightmareDeadEvent,	0x13
+.definelabel DataPad4Event,         0x14
+.definelabel Box2TriggerEvent,		0x15
+.definelabel Box2DeadEvent,			0x16
+.definelabel LabExplosionEvent,		0x17
+.definelabel LabDestroyedEvent,		0x18
+.definelabel RidleyDeadEvent,		0x19
+.definelabel SaxDeadEvent,			0x1A
+.definelabel EscapeEvent,			0x1B
 
 
 ; ram and rom addresses
@@ -87,8 +91,9 @@
 .org 0x822B9E8  ; unused sound
 
 .include "language\language_new.asm"
+.include "events\events_new.asm"
 .include "bosses_new.asm"
-.include "abilities_new.asm"
+.include "items_new.asm"
 .include "navigation_new.asm"
 
 ;---------------
@@ -98,11 +103,11 @@
 ; force english and allow choosing japanese
 .include "language\language.asm"
 
+; ; new event system
+; .include "events\events.asm"
+
 ; fix boss spawning, hatch locking, and music
 .include "bosses.asm"
-
-; allow obtaining core-x items
-;.include "abilities.asm"
 
 ; allow unlocking hatches
 .include "security_pad.asm"

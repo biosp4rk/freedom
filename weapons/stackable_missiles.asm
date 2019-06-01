@@ -381,7 +381,7 @@
     str     r3,[sp,4]
     ldrb    r0,[r2,0x1F]
     str     r0,[sp,8]
-    mov     r0,0x12             ; r0 = ProjType
+    mov     r0,0x12				; r0 = ProjType
     mov     r1,r6               ; r1 = ProjYPos
     mov     r2,r7               ; r2 = ProjXPos
     mov     r3,0                ; r3 = ProjPart

@@ -3,7 +3,7 @@ CheckSpawnBoss:
 	push    r14
 	mov     r1,r12
 	push    r1			; need to preserve r12 for some bosses
-	bl      CheckHasItem
+	bl      CheckEvent
 	cmp     r0,0
 	bne     @@Return
 	mov     r0,0x3F

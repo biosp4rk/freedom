@@ -17,8 +17,8 @@
 
 ; fix starting values
 .org 0x828F5C1
-	.byte 0				; start with security level 0
-	.byte 0				; start without main deck map
+	.db 0			; start with security level 0
+	.db 0			; start without main deck map
 
 ; improve eyedoor rng
 .org 0x8043304
@@ -28,7 +28,7 @@
 .org 0x8009C9C
 	mov     r0,8
 .org 0x8009CAC
-	.word 0xFFF8
+	.dw 0xFFF8
 
 ; TODO: mid-air bomb jump
 ; .org 0x800922E
@@ -37,10 +37,6 @@
 	; b       0x8009268
 ; .org 0x800924A
 	; beq     0x8009268
-
-; play music track for room
-;.org 0x8090FC8
-;	mov r1,0		; sets 0x30019F1 to 0
 
 ; TODO: abilities add percent
 .org 0x80A4458

@@ -1,8 +1,10 @@
 .definelabel Language,0x3000014
 .definelabel MessageToDisplay,0x0300001F
+.definelabel Difficulty,0x3000020
 .definelabel AreaID,0x3000032
 .definelabel DoorUnlockTimer,0x300004C
 .definelabel CurrClipdataAffectingAction,0x3000059
+.definelabel EventFlags,0x3000066
 .definelabel SpriteDataSlot0,0x3000174
 .definelabel CurrSpriteData,0x30006F0
 .definelabel ProjectileDataSlot0,0x3000994
@@ -38,6 +40,8 @@
 .definelabel InitMissile,0x8085BFC
 .definelabel MoveTinkedMissile,0x8085CF0
 
+.definelabel TankIncreaseAmounts,0x83CB898
+.definelabel NumTanksPerArea,0x857868C
 .definelabel NormalMissileSpeeds,0x858BB9C
 .definelabel NormalBeamPalette,0x858BBF4
 .definelabel ChargeBeamPalette,0x858BC14
