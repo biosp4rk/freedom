@@ -1,45 +1,45 @@
 ; if sprite is solid for projectiles
-	; UpdateSpriteFlash()
-	; if ice and not frozen and can be frozen
-		; StandingOnSpriteFlag = 0
-		; FreezeTimer = F0
-		; PaletteRow = F - (SpritesetGfxSlot + FrozenPaletteRow)
-	; if not wave
-		; SetParticle(BeamHit)
-		; remove projectile
+    ; UpdateSpriteFlash()
+    ; if ice and not frozen and can be frozen
+        ; StandingOnSpriteFlag = 0
+        ; FreezeTimer = F0
+        ; PaletteRow = F - (SpritesetGfxSlot + FrozenPaletteRow)
+    ; if not wave
+        ; SetParticle(BeamHit)
+        ; remove projectile
 ; else if immune to projectiles
-	; tink
-	; remove projectile
+    ; tink
+    ; remove projectile
 ; else
-	; if ice
-		; if weak to (charged) beam or can be frozen
-			; FlashTimer = LowerSpriteHealth_IceBeam(damage)
-			; if creates debris
-				; if plasma
-					; CreateSpriteDebris_PiercingBeam(2, FlashTimer)
-				; else
-					; CreateSpriteDebris(2, FlashTimer)
-			; if not plasma
-				; SetParticle(BeamHit)
-				; remove proj
-				; return
-		; else
-			; UpdateSpriteFlash()
-			; tink
-	; else
-		; if weak to (charged) beam
-			; FlashTimer = LowerSpriteHealth(Damage)
-			; if creates debris
-				; if plasma
-					; CreateSpriteDebris_PiercingBeam(1, FlashTimer)
-				; else
-					; CreateSpriteDebris(1, FlashTimer)
-			; if not plasma
-				; SetParticle(BeamHit)
-				; remove proj
-				; return
-		; else
-			; UpdateSpriteFlash()
-			; tink
-	; if not plasma
-		; remove proj
+    ; if ice
+        ; if weak to (charged) beam or can be frozen
+            ; FlashTimer = LowerSpriteHealth_IceBeam(damage)
+            ; if creates debris
+                ; if plasma
+                    ; CreateSpriteDebris_PiercingBeam(2, FlashTimer)
+                ; else
+                    ; CreateSpriteDebris(2, FlashTimer)
+            ; if not plasma
+                ; SetParticle(BeamHit)
+                ; remove proj
+                ; return
+        ; else
+            ; UpdateSpriteFlash()
+            ; tink
+    ; else
+        ; if weak to (charged) beam
+            ; FlashTimer = LowerSpriteHealth(Damage)
+            ; if creates debris
+                ; if plasma
+                    ; CreateSpriteDebris_PiercingBeam(1, FlashTimer)
+                ; else
+                    ; CreateSpriteDebris(1, FlashTimer)
+            ; if not plasma
+                ; SetParticle(BeamHit)
+                ; remove proj
+                ; return
+        ; else
+            ; UpdateSpriteFlash()
+            ; tink
+    ; if not plasma
+        ; remove proj

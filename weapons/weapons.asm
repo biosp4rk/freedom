@@ -11,8 +11,8 @@
 
 ; energy tank
 .org 0x806CA58
-	bl      AddEnergy
-	b       0x806CAC2
+    bl      AddEnergy
+    b       0x806CAC2
 
 ; obtain power bombs from power bomb tank
 .org 0x806CA94
@@ -23,5 +23,5 @@
 .org 0x828F5B8
     .dh 0       ; starting missile supply
     .dh 0       ; starting missile capacity
-    .db 0		; starting power bomb supply
-    .db 0		; starting power bomb capacity
+    .db 0       ; starting power bomb supply
+    .db 0       ; starting power bomb capacity

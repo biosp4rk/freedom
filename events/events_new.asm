@@ -1,6 +1,6 @@
 ; function to set an event
 SetEvent:
-	; r0 = EventNum
+    ; r0 = EventNum
     cmp     r0,0
     beq     @@Return
     sub     r0,1
@@ -29,4 +29,3 @@ CheckEvent:
     mov     r0,1
 @@Return:
     bx      r14
-

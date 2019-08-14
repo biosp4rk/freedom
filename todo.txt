@@ -1,3 +1,9 @@
+TODO
+  - If not removing any tanks, need to scale end percent
+
+BUGS
+  - Fix music not playing when loading from ship
+
 Events
   O Function to check event
   O Function to set event
@@ -6,13 +12,12 @@ Event list
   X EasyEvent
   X HardEvent
   O ArachnusDeadEvent
-  X ElevatorEvent
   O ChargeCoreDeadEvent
   O ZazabiDeadEvent
   O SerrisDeadEvent
   O WaterLevelEvent
   X Box1TriggerEvent
-  X Box1DeadEvent
+  O Box1DeadEvent
   O MegaXDeadEvent
   O WideCoreDeadEvent
   O AnimalsEvent
@@ -31,7 +36,7 @@ Items
   O Assign item per core-x
   O Assign item per eye core-x
   O Assign item per data pad
-  X Abilities count as percent
+  O Abilities count as percent
 
 Bosses
   O Check for item before spawning
@@ -50,10 +55,11 @@ Weapons
 Navigation rooms
   O Only get area map
   O Enable/disable pad
-  X Change text to "Map Room" (all languages)
-  X Change minimap tile to "M"
+  O Change text to "Map Room" (all languages)
+  O Change minimap tile to "M"
   O Prevent doors locking
   O Skip map for ship
+  X Disable objective on pause screen
 
 Data pads
   O Enable/disable pad
@@ -70,9 +76,8 @@ Language
   
 Misc
   O Fix text for abilities and security levels
-  X Random SA-X encounters
   O Skip intro
   O Skip to credits
   O Faster elevators
   O Better eye door RNG
-  X Ending images based on animals
+  O Ending images based on animals

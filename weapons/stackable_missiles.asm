@@ -381,7 +381,7 @@
     str     r3,[sp,4]
     ldrb    r0,[r2,0x1F]
     str     r0,[sp,8]
-    mov     r0,0x12				; r0 = ProjType
+    mov     r0,0x12             ; r0 = ProjType
     mov     r1,r6               ; r1 = ProjYPos
     mov     r2,r7               ; r2 = ProjXPos
     mov     r3,0                ; r3 = ProjPart
@@ -483,11 +483,11 @@ GetMissileHitEffect:
 
 ; make all missile types branch to same code
 .org 0x87EE940
-    .word CombinedProcessMissile + 1    ; normal
-    .word CombinedProcessMissile + 1    ; super
-    .word CombinedProcessMissile + 1    ; ice
-    .word CombinedProcessMissile + 1    ; diffusion
-    .word CombinedProcessMissile + 1    ; charged
+    .dw CombinedProcessMissile + 1      ; normal
+    .dw CombinedProcessMissile + 1      ; super
+    .dw CombinedProcessMissile + 1      ; ice
+    .dw CombinedProcessMissile + 1      ; diffusion
+    .dw CombinedProcessMissile + 1      ; charged
 
 .org 0x8085D60
 CombinedProcessMissile:
