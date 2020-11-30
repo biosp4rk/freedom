@@ -3,6 +3,7 @@ TODO
 
 BUGS
   - Fix music not playing when loading from ship
+    - Need to call 8071C30(1E, 2)
 
 Events
   O Function to check event

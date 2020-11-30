@@ -18,6 +18,7 @@
 .definelabel DMA3SourceAddress,0x40000D4
 
 .definelabel PlaySound,0x8002754
+.definelabel PlayMusic,0x800359C
 .definelabel LockHatches,0x8063674
 .definelabel SetParticleEffect,0x8073790
 .definelabel CheckNumProjectiles,0x8081DCC

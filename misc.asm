@@ -37,3 +37,16 @@
     b       0x80092E0
 .org 0x80092C2
     beq     0x80092E0
+
+
+; TODO: move
+; force music to play first time exiting ship
+.org 0x8071D0C
+    ldr     r0,=AreaID
+    ldrh    r0,[r0]
+    cmp     r0,0
+    bne     0x8071D76
+    mov     r0,0x1E     ; music track
+    mov     r1,2
+    bl      PlayMusic
+    .pool

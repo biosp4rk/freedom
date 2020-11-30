@@ -12,6 +12,7 @@ SetEvent:
     str     r0,[r2]
 @@Return:
     bx      r14
+    .pool
 
 ; function to check an event
 CheckEvent:
@@ -29,3 +30,4 @@ CheckEvent:
     mov     r0,1
 @@Return:
     bx      r14
+    .pool
